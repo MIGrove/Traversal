@@ -1,0 +1,5 @@
+First moves
+3 10
+xxxx...xxx
+s.x..x.x.t
+x...xx...x
