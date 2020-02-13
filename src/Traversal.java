@@ -23,6 +23,8 @@ public class Traversal {
 		int rows = readFileBoard.readInt();
 		int columns = readFileBoard.readInt();
 		
+		readFileBoard.readLine();
+		
 		board = new char[rows][columns];
 				
 		System.out.printf("\nrows: %d\tcolumns: %d\n\nreading", rows, columns);
@@ -35,7 +37,7 @@ public class Traversal {
 			System.out.print('.');
 			readFileBoard.readLine();
 		}
-		System.out.println("\nreading complete");
+		System.out.println("\nreading complete\n");
 	}
 	
 	private static void displayBoard() {
