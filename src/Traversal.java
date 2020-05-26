@@ -20,7 +20,11 @@ public class Traversal {
 			"u", "d", "l", "r",
 			"U", "D", "L", "R"
 	};
-	private static String[][] moverMap;
+	private static String[] miscTypes = new String[] {
+			".", "t", "T", "x",
+			"X","h", "H", "v",
+			"V", "k", "p", "P"
+	};
 
 	//	constants
 	private static final int ROW = 0;
@@ -48,15 +52,13 @@ public class Traversal {
 		readBoard();
 
 		//	post-init.
-		//readMoves();
-		move('R');
-		move('R');
-		move('L');
-		move('R');
-		move('L');
+		System.out.println("----------");
+		getMoverMapOnTurn(5);
+		System.out.println("miscMap:");
+		print2DArray(generateMiscMap());
+		System.out.println("----------");
 
-		generateMoverMap();
-		getMoverMapOnTurn(3);
+		readMoves();
 	}
 
 	private static void readBoard() {
@@ -295,8 +297,8 @@ public class Traversal {
 		displayBoard();
 	}
 
-	private static void generateMoverMap() {
-		moverMap = new String[board.length][board[0].length];
+	private static String[][] generateMiscMap() {
+		String[][] miscMap = new String[board.length][board[0].length];
 		try {
 			Scanner scanBoard = new Scanner(new File(filepathBoard));
 
@@ -304,17 +306,16 @@ public class Traversal {
 			scanBoard.nextLine();
 
 			for(int i = 0; i < rows; i++) {
-				String row = scanBoard.nextLine();
-				Scanner scanRow = new Scanner(row).useDelimiter("");
+				Scanner scanRow = new Scanner(scanBoard.nextLine()).useDelimiter("");
 
 				for(int j = 0; j < columns; j++) {
 					String piece = scanRow.next();
 
-					if(Arrays.asList(moverTypes).contains(piece)) {
-						moverMap[i][j] = piece;
+					if(Arrays.asList(miscTypes).contains(piece)) {
+						miscMap[i][j] = piece;
 					}
 					else {
-						moverMap[i][j] = ".";
+						miscMap[i][j] = ".";
 					}
 				}
 			}
@@ -322,6 +323,12 @@ public class Traversal {
 		catch(FileNotFoundException fnfex) {
 			fnfex.printStackTrace();
 		}
+
+		return miscMap;
+	}
+
+	private static void generateMoverMap() {
+
 	}
 
 	private static String[][] getMoverMapOnTurn(int requestedTurn) {
@@ -418,7 +425,7 @@ public class Traversal {
 		System.out.println("newMoverMap");
 		print2DArray(newMoverMap);
 
-		return null;
+		return newMoverMap;
 	}
 
 	private static void print2DArray(String[][] array) {
