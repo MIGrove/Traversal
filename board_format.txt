@@ -1,0 +1,24 @@
+Board file format
+The first line of the file is a string. This is the title of board. Your program must read this line, but it may ignore it further.
+The second line of the file describes the first of the board. It contains two integers, R and C, separated by a single space. The board will contain R rows and C columns. It is given that 3 ≤ R ≤ 15 and 3 ≤ C ≤ 15. Both integers start with a non-zero digit. The line contains nothing else.
+The next R lines contains exactly C characters each. Each character denotes the contain of one cell of the board.
+A "." character denotes an empty cell.
+A "s" (lowercase) or "S" (uppercase) character denotes the starting position of the player. Each file will contain a single "s"/"S" character.
+A "t" (lowercase) or "T" (uppercase) character denotes the position of the target. Each file will contain a single "t"/"T" character.
+A "x" (lowercase) or "X" (uppercase) character denotes a wall.
+A "u" (lowercase) character denotes a horizontal mover that moves up.
+A "d" (lowercase) character denotes a horizontal mover that moves down.
+A "l" (lowercase) character denotes a horizontal mover that moves left.
+A "r" (lowercase) character denotes a horizontal mover that moves right.
+A "U" (uppercase) character denotes a vertical mover that moves up.
+A "D" (uppercase) character denotes a vertical mover that moves down.
+A "L" (uppercase) character denotes a vertical mover that moves left.
+A "R" (uppercase) character denotes a vertical mover that moves right.
+A "h" (lowercase) character denotes a closed horizontal switch.
+A "H" (uppercase) character denotes an open horizontal switch.
+A "v" (lowercase) character denotes a closed vertical switch.
+A "V" (uppercase) character denotes an open vertical switch.
+A "k" (lowercase) or "K" (uppercase) character denotes a key.
+A "p" (lowercase) character denotes a closed port.
+A "P" (uppercase) character denotes an open port.
+The file does not contain anything else.

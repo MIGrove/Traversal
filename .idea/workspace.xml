@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1c964468-a7bb-40d0-b70b-cf73349fa2fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/board_01.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/board_02.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/board_14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/board_01.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/board_02.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/board_03.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/board_04.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/board_05.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/board_06.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/board_07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/board_08.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/board_09.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/board_10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/board_11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/board_12.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/board_13.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/board_14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/moves_01.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/moves_02.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/moves_03.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/moves_04.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/moves_05.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/moves_06.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/moves_07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/moves_08.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/moves_09.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/moves_10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/moves_11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/moves_12.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/moves_13.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/moves_14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/output_01.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/output_02.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/output_03.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/output_04.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/output_05.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/output_06.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/output_07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/output_08.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/output_09.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/output_10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/output_11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/output_12.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/output_13.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/output_14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples1/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Traversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traversal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/board_14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/princeton/In.class" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Traversal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3949">
+              <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/samples/board_test.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/samples/moves_test.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="5" selection-start-column="5" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>read</find>
+      <find>columns</find>
+      <find>fileNameBoard</find>
+      <find>fileNameMoves</find>
+      <find>filePath</find>
+      <find>destinationPos</find>
+      <find>wrapDestination</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>nextInt</replace>
+      <replace>next</replace>
+      <replace>filePathBoard</replace>
+      <replace>filePathMoves</replace>
+      <replace>filepath</replace>
+      <replace>destination</replace>
+      <replace>newWrapDestination</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/board_14.txt" />
+        <option value="$PROJECT_DIR$/board_14.txt" />
+        <option value="$PROJECT_DIR$/moves_01.txt" />
+        <option value="$PROJECT_DIR$/board_test.txt" />
+        <option value="$PROJECT_DIR$/moves_02.txt" />
+        <option value="$PROJECT_DIR$/samples/moves_08.txt" />
+        <option value="$PROJECT_DIR$/samples/output_08.txt" />
+        <option value="$PROJECT_DIR$/samples/board_08.txt" />
+        <option value="$PROJECT_DIR$/src/StdDraw.java" />
+        <option value="$PROJECT_DIR$/src/Test.java" />
+        <option value="$PROJECT_DIR$/samples/board_test.txt" />
+        <option value="$PROJECT_DIR$/samples/moves_test.txt" />
+        <option value="$PROJECT_DIR$/src/Traversal.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="256" />
+    <option name="y" value="-17" />
+    <option name="width" value="1155" />
+    <option name="height" value="1087" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Traversal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Traversal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Traversal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Traversal" type="462c0819:PsiDirectoryNode" />
+              <item name="samples" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Traversal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Traversal" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Traversal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Traversal" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="princeton" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="add_unversioned_files" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590522804956" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Matthew\Documents\GitHub\Traversal\src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Matthew\Documents\GitHub\Traversal" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Traversal">
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="Traversal" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Traversal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Traversal" />
+      <module name="Traversal" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Traversal" />
+        <item itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1c964468-a7bb-40d0-b70b-cf73349fa2fa" name="Default Changelist" comment="" />
+      <created>1586446394029</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586446394029</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="top" id="Messages" order="0" weight="0.28254288" />
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Learn" order="5" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.13006397" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="3" />
+      <window_info anchor="bottom" id="Find" order="4" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.39959636" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="8" />
+      <window_info anchor="bottom" id="Dependency Viewer" order="9" weight="0.6071076" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Theme Preview" order="1" />
+      <window_info anchor="right" id="Maven" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
+      <window_info active="true" anchor="right" id="Run" order="8" visible="true" weight="0.358742" />
+    </layout>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Traversal.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#1514#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/board_14.txt" />
+    <entry file="file://$PROJECT_DIR$/samples1/moves_02.txt" />
+    <entry file="file://$PROJECT_DIR$/samples1/moves_01.txt" />
+    <entry file="file://$PROJECT_DIR$/board_format.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="67" selection-start-line="12" selection-start-column="67" selection-end-line="12" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/board_02.txt" />
+    <entry file="file://$PROJECT_DIR$/board_14.txt" />
+    <entry file="file://$PROJECT_DIR$/board_01.txt" />
+    <entry file="file://$PROJECT_DIR$/moves_01.txt" />
+    <entry file="file://$PROJECT_DIR$/moves_02.txt" />
+    <entry file="file://$PROJECT_DIR$/board_test.txt" />
+    <entry file="file://$PROJECT_DIR$/samples/moves_13.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/moves_14.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/moves_12.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/moves_11.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/moves_10.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/moves_09.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/moves_03.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/moves_07.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/output_04.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/moves_04.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/moves_05.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/output_05.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/output_06.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/moves_06.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/output_07.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/moves_08.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/board_08.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/output_10.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/output_11.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/output_12.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/output_13.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/output_14.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/output_08.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/princeton/StdDraw.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="404" selection-start-line="404" selection-end-line="404" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StdDraw.java" />
+    <entry file="file://$PROJECT_DIR$/src/princeton/StdAudio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/princeton/BinaryStdIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/output_09.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/board_test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/moves_test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Traversal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3949">
+          <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Traversal</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
