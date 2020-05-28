@@ -1,5 +1,4 @@
-package princeton;
-/*************************************************************************
+package princeton; /*************************************************************************
  *  Compilation:  javac StdOut.java
  *  Execution:    java StdOut
  *

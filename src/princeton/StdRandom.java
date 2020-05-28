@@ -1,5 +1,4 @@
-package princeton;
-/*************************************************************************
+package princeton; /*************************************************************************
  *  Compilation:  javac StdRandom.java
  *  Execution:    java StdRandom
  *

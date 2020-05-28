@@ -1,4 +1,3 @@
-package princeton;
 /*************************************************************************
  *  Compilation:  javac StdDraw.java
  *  Execution:    java StdDraw
@@ -24,16 +23,19 @@ package princeton;
  *
  *************************************************************************/
 
+import javax.imageio.ImageIO;
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.geom.*;
-import java.awt.image.*;
-import java.io.*;
-import java.net.*;
+import java.awt.image.BufferedImage;
+import java.awt.image.DirectColorModel;
+import java.awt.image.WritableRaster;
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
 import java.util.LinkedList;
 import java.util.TreeSet;
-import javax.imageio.ImageIO;
-import javax.swing.*;
 
 /**
  *  <i>Standard draw</i>. This class provides a basic capability for
@@ -164,7 +166,7 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
      *
      * @param w the width as a number of pixels
      * @param h the height as a number of pixels
-     * @throws a IllegalArgumentException if the width or height is 0 or negative
+     * @throws IllegalArgumentException if the width or height is 0 or negative
      */
     public static void setCanvasSize(int w, int h) {
         if (w < 1 || h < 1) throw new IllegalArgumentException("width and height must be positive");

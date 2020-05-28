@@ -1,4 +1,3 @@
-package princeton;
 /*************************************************************************
  *  Compilation:  javac StdStats.java
  *  Execution:    java StdStats < input.txt
@@ -23,6 +22,9 @@ package princeton;
  *     std dev   1.581
  *
  *************************************************************************/
+
+import princeton.StdArrayIO;
+import princeton.StdOut;
 
 /**
  *  <i>Standard statistics</i>. This class provides methods for computing

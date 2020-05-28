@@ -44,8 +44,8 @@ public class Traversal {
 	public static void main(String[] args) {
 		//filepathBoard = args[0];
 		//filepathMoves = args[1];
-		filepathBoard = "samples\\board_14.txt";
-		filepathMoves = "samples\\moves_14.txt";
+		filepathBoard = "samples\\board_test.txt";
+		filepathMoves = "samples\\moves_test.txt";
 
 		//	initialisation
 		initialise();
@@ -59,11 +59,13 @@ public class Traversal {
 
 			board = mergeMaps(map0, map1, map2, map3);
 
-			displayBoard();
+			displayBoardText();
 			checkForConflicts(false, map1, map2, map3);
 
 			turn++;
 		}
+
+		drawBoard();
 	}
 
 	private static void initialise() {
@@ -92,6 +94,85 @@ public class Traversal {
 		catch(FileNotFoundException fnfex) {
 			fnfex.printStackTrace();
 		}
+	}
+
+	private static void drawBoard() {
+		double[][][] grid = new double[rows][columns][2];
+		double aspectRatio = 0.5625;
+		double width = aspectRatio * 0.1;
+		double height = 0.1;
+		//double xValue = 1d / columns;
+		double xValue = (0.5 - (width * columns / 2)) + (width / 2);
+		//double yValue = 1 - (height / 2);
+		double yValue = (0.5 + (height * rows / 2)) - (height / 2);
+
+		StdDraw.setCanvasSize(1920, 1080);
+
+		for(int i = 0; i < rows; i++) {
+			for(int j = 0; j < columns; j++) {
+				grid[i][j][0] = xValue + (j * width);
+				grid[i][j][1] = yValue - (i * height);
+			}
+		}
+
+		int i = 0;
+
+		for(double[][] row : grid) {
+			int j = 0;
+			for(double[] cell : row) {
+				StdDraw.picture(cell[0], cell[1], "assets\\images\\tvl_e.png", width, height);
+
+				switch(board[i][j]) {
+					case "s":
+					case "S":
+						StdDraw.picture(cell[0], cell[1], "assets\\images\\tvl_s.png", width, height);
+						break;
+					case "x":
+					case "X":
+						StdDraw.picture(cell[0], cell[1], "assets\\images\\tvl_x.png", width, height);
+						break;
+					case "U":
+						StdDraw.picture(cell[0], cell[1], "assets\\images\\tvl_uv.png", width, height);
+						break;
+					case "D":
+						StdDraw.picture(cell[0], cell[1], "assets\\images\\tvl_dv.png", width, height);
+						break;
+					case "L":
+						StdDraw.picture(cell[0], cell[1], "assets\\images\\tvl_lv.png", width, height);
+						break;
+					case "R":
+						StdDraw.picture(cell[0], cell[1], "assets\\images\\tvl_rv.png", width, height);
+						break;
+					case "u":
+						StdDraw.picture(cell[0], cell[1], "assets\\images\\tvl_uh.png", width, height);
+						break;
+					case "d":
+						StdDraw.picture(cell[0], cell[1], "assets\\images\\tvl_dh.png", width, height);
+						break;
+					case "l":
+						StdDraw.picture(cell[0], cell[1], "assets\\images\\tvl_lh.png", width, height);
+						break;
+					case "r":
+						StdDraw.picture(cell[0], cell[1], "assets\\images\\tvl_rh.png", width, height);
+						break;
+				}
+				j++;
+			}
+			i++;
+		}
+
+		double[] cornerUL = {grid[0][0][0] - (width / 2), grid[0][0][1] + (height / 2)};
+		double[] cornerDL = {grid[0][0][0] - (width / 2), grid[rows - 1][0][1] - (height / 2)};
+		double[] cornerDR = {grid[0][columns - 1][0] + (width / 2), grid[rows - 1][0][1] - (height / 2)};
+		double[] cornerUR = {grid[0][columns - 1][0] + (width / 2), grid[0][0][1] + (height / 2)};
+
+		StdDraw.line(cornerUL[0], cornerUL[1], cornerDL[0], cornerDL[1]);
+		StdDraw.line(cornerDL[0], cornerDL[1], cornerDR[0], cornerDR[1]);
+		StdDraw.line(cornerDR[0], cornerDR[1], cornerUR[0], cornerUR[1]);
+		StdDraw.line(cornerUR[0], cornerUR[1], cornerUL[0], cornerUL[1]);
+
+		System.out.println(Arrays.deepToString(grid));
+
 	}
 
 	private static int findQuit() {
@@ -134,7 +215,7 @@ public class Traversal {
 		return count;
 	}
 	
-	private static void displayBoard() {
+	private static void displayBoardText() {
 		System.out.println("\nTurn " + turn);
 		for(String[] row : board) {
 			for(String piece : row) {

@@ -1,5 +1,4 @@
-package princeton;
-/*************************************************************************
+package princeton; /*************************************************************************
  *  Compilation:  javac StdArrayIO.java
  *  Execution:    java StdArrayIO < input.txt
  *
@@ -43,6 +42,8 @@ package princeton;
  *
  *************************************************************************/
 
+
+import princeton.StdIn;
 
 /**
  *  <i>Standard array IO</i>. This class provides methods for reading
