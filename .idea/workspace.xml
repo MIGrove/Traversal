@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1c964468-a7bb-40d0-b70b-cf73349fa2fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Traversal/Traversal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Traversal/Traversal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/board_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/board_test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/moves_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/moves_test.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Traversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traversal.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,29 +21,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Traversal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+            <state relative-caret-position="306">
+              <caret line="47" column="48" lean-forward="true" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#13161#13162#0" expanded="true" />
+                <element signature="e#13220#13221#0" expanded="true" />
+                <element signature="e#13391#13392#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/samples/board_test.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/samples/moves_test.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" selection-start-column="5" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -71,6 +57,9 @@
       <find>generateMiscMap</find>
       <find>board</find>
       <find>initialiseBoard</find>
+      <find>generateMoverMapOnTurn</find>
+      <find>scanMoves</find>
+      <find>System.out</find>
     </findStrings>
     <replaceStrings>
       <replace>nextInt</replace>
@@ -84,6 +73,8 @@
       <replace>generateMoverMapOnTurn</replace>
       <replace>generateMiscMapOnTurn</replace>
       <replace>initialise</replace>
+      <replace>generateMiscMap</replace>
+      <replace>generateMoverMap</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -102,15 +93,15 @@
         <option value="$PROJECT_DIR$/samples/board_08.txt" />
         <option value="$PROJECT_DIR$/src/StdDraw.java" />
         <option value="$PROJECT_DIR$/src/Test.java" />
-        <option value="$PROJECT_DIR$/samples/moves_test.txt" />
         <option value="$PROJECT_DIR$/samples/board_test.txt" />
+        <option value="$PROJECT_DIR$/samples/moves_test.txt" />
         <option value="$PROJECT_DIR$/src/Traversal.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="317" />
-    <option name="y" value="-14" />
+    <option name="x" value="834" />
+    <option name="y" value="129" />
     <option name="width" value="1155" />
     <option name="height" value="1087" />
   </component>
@@ -119,7 +110,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -170,6 +160,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -178,7 +169,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="add_unversioned_files" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590533550891" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590625686126" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -247,7 +238,7 @@
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="top" id="Messages" order="0" weight="0.30070636" />
+      <window_info anchor="top" id="Messages" order="0" weight="0.16649848" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="Image Layers" order="1" />
       <window_info id="Designer" order="2" />
@@ -255,7 +246,7 @@
       <window_info id="Capture Tool" order="4" />
       <window_info id="Learn" order="5" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.13006397" />
+      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.13219616" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
@@ -274,7 +265,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
-      <window_info active="true" anchor="right" id="Run" order="8" visible="true" weight="0.32622603" />
+      <window_info active="true" anchor="right" id="Run" order="8" visible="true" weight="0.2510661" />
     </layout>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -282,16 +273,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Traversal.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#1514#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -320,57 +301,11 @@
     <entry file="file://$PROJECT_DIR$/samples/moves_12.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/samples/moves_11.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/samples/moves_10.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/moves_09.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/moves_03.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/output_04.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/moves_04.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/output_05.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/output_06.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/samples/moves_06.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/output_07.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/output_10.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/output_11.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/output_12.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/output_13.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/output_14.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/output_08.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="4" selection-start-column="4" selection-end-column="4" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/princeton/StdDraw.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -397,16 +332,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/output_09.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test.java" />
     <entry file="file://$PROJECT_DIR$/samples/board_05.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -433,13 +359,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/samples/moves_08.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" selection-start-column="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/Scanner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -447,26 +366,101 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/samples/moves_test.txt">
+    <entry file="file://$PROJECT_DIR$/samples/output_01.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/output_02.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/moves_03.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/output_03.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/moves_04.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/board_04.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/output_04.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/output_05.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/output_06.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/output_07.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/moves_08.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/output_08.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/moves_09.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/output_09.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/output_10.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/samples/board_test.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        <state relative-caret-position="90">
+          <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/samples/moves_test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/moves_11.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/output_11.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/output_12.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/output_13.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/output_14.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Traversal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+        <state relative-caret-position="306">
+          <caret line="47" column="48" lean-forward="true" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#13161#13162#0" expanded="true" />
+            <element signature="e#13220#13221#0" expanded="true" />
+            <element signature="e#13391#13392#0" expanded="true" />
           </folding>
         </state>
       </provider>

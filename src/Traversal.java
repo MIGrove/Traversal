@@ -7,9 +7,9 @@ import java.util.Scanner;
 //	NB: As OOP, or more specifically objects, are not allowed in this project, every method has been made static.
 
 public class Traversal {
-	private static int[] currentPlayerPosition = new int[2];
-	private static int turn = 0, totalMoves;
+	private static int turn = 0, quitTurn, totalMoves;
 	private static int rows, columns;
+	private static int playerOffset = 0;
 	private static boolean gameOver = false;
 	private static String filepathBoard, filepathMoves;
 	private static String boardName;
@@ -21,7 +21,7 @@ public class Traversal {
 			"U", "D", "L", "R"
 	};
 	private static String[] miscTypes = new String[] {
-			".", "t", "T", "x",
+			"t", "T", "x",
 			"X","h", "H", "v",
 			"V", "k", "p", "P"
 	};
@@ -44,23 +44,23 @@ public class Traversal {
 	public static void main(String[] args) {
 		//filepathBoard = args[0];
 		//filepathMoves = args[1];
-		filepathBoard = "samples\\board_test.txt";
-		filepathMoves = "samples\\moves_test.txt";
+		filepathBoard = "samples\\board_14.txt";
+		filepathMoves = "samples\\moves_14.txt";
 
 		//	initialisation
 		initialise();
 
 		//	post-init.
-		while(!gameOver && turn <= totalMoves) {
+		while(!gameOver && turn <= totalMoves && turn != quitTurn) {
 			String[][] map0 = generateBlankMap();
-			String[][] map1 = generateMiscMapOnTurn(turn);
-			String[][] map2 = generateMoverMapOnTurn(turn);
+			String[][] map1 = generateMiscMap(turn);
+			String[][] map2 = generateMoverMap(turn);
 			String[][] map3 = generatePlayerMap(turn);
 
-			board = mergeMaps(map0, map1, map2, map3);	//	error when adding map3 (map3 is empty)
+			board = mergeMaps(map0, map1, map2, map3);
 
-			checkForConflicts();
 			displayBoard();
+			checkForConflicts(false, map1, map2, map3);
 
 			turn++;
 		}
@@ -75,6 +75,7 @@ public class Traversal {
 			board = new String[rows][columns];
 			totalMoves = getTotalMoves();
 			moves = new String[totalMoves];
+			quitTurn = findQuit();
 
 			try {
 				Scanner scanMoves = new Scanner(new File(filepathMoves)).useDelimiter("");
@@ -91,6 +92,29 @@ public class Traversal {
 		catch(FileNotFoundException fnfex) {
 			fnfex.printStackTrace();
 		}
+	}
+
+	private static int findQuit() {
+		try {
+			Scanner scanMoves = new Scanner(new File(filepathMoves)).useDelimiter("");
+			int currentTurn = 0;
+
+			while(scanMoves.hasNext()) {
+				String move = scanMoves.next();
+
+				if(move.equalsIgnoreCase("x")) {
+					return (currentTurn + 1);
+				}
+
+				currentTurn++;
+			}
+			scanMoves.close();
+		}
+		catch(FileNotFoundException fnfex) {
+			fnfex.printStackTrace();
+		}
+
+		return -1;
 	}
 
 	private static int getTotalMoves() {
@@ -137,10 +161,66 @@ public class Traversal {
 				destination[COLUMN] -= columns;
 			}
 		}
+		else {
+			if(destination[COLUMN] < 0) {
+				destination[COLUMN] = 0;
+				playerOffset++;
+			}
+			else if(destination[COLUMN] > columns - 1) {
+				destination[COLUMN] = columns - 1;
+				playerOffset++;
+			}
+		}
+	}
+	//	will search for overlapping pieces and give suitable responses
+	private static void checkForConflicts(boolean verbose, String[][]... maps) {
+		//	compare board to individual generated maps to see if all unique pieces are common (not including ".")
+		for(String[][] map : maps) {
+			for(int i = 0; i < rows; i++) {
+				for(int j = 0; j < columns; j++) {
+					if(!board[i][j].equalsIgnoreCase(".")) {
+						if(!map[i][j].equals(board[i][j]) && !map[i][j].equals("?")) {
+							/*
+								Java doesn't support switch cases with a pair of booleans,
+								so I made this hacky work-around. Seems to work.
+							 */
+							String[] conflictingPieces = {map[i][j], board[i][j]};
+
+							boolean containsPlayer = contains(conflictingPieces, "s", "S");
+							boolean containsTarget = contains(conflictingPieces, "t", "T");
+							boolean containsWall = contains(conflictingPieces, "x", "X");
+							boolean containsMover = contains(conflictingPieces, (Object[]) moverTypes);
+
+							if(containsPlayer) {
+								if(containsTarget) {
+									gameWin();
+								}
+								else if(containsWall || containsMover) {
+									gameLose();
+								}
+							}
+
+							if(verbose) {
+								System.out.printf("" +
+												"conflict found at:\t(%d, %d)\n" +
+												"conflicting pieces:\t\"%s\" and \"%s\"\n",
+										i, j, map[i][j], board[i][j]);
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 
-	private static void checkForConflicts() {
-		//	will search for overlapping pieces and give suitable responses
+	private static boolean contains(Object[] array, Object... items) {
+		boolean containsItem = false;
+
+		for(Object item : items) {
+			containsItem = Arrays.asList(array).contains(item) || containsItem;
+		}
+
+		return containsItem;
 	}
 
 	//	this method will load the given maps on top of each other in the order given
@@ -178,7 +258,7 @@ public class Traversal {
 		return blankMap;
 	}
 
-	private static String[][] generateMiscMapOnTurn(int requestedTurn) {
+	private static String[][] generateMiscMap(int requestedTurn) {
 		String[][] miscMap = new String[rows][columns];
 
 		try {
@@ -211,7 +291,7 @@ public class Traversal {
 		return miscMap;
 	}
 
-	private static String[][] generateMoverMapOnTurn(int requestedTurn) {
+	private static String[][] generateMoverMap(int requestedTurn) {
 		String[][] newMoverMap = new String[rows][columns];
 		String[][] mapOnlyMovers = new String[rows][columns];
 
@@ -269,10 +349,26 @@ public class Traversal {
 						wrapDestination(destination, false);
 						break;
 					case "L":
-						destination[COLUMN] -= horizontalMoves;
+						destination[COLUMN] -= verticalMoves;
 						wrapDestination(destination, false);
 						break;
 					case "R":
+						destination[COLUMN] += verticalMoves;
+						wrapDestination(destination, false);
+						break;
+					case "u":
+						destination[ROW] -= horizontalMoves;
+						wrapDestination(destination, false);
+						break;
+					case "d":
+						destination[ROW] += horizontalMoves;
+						wrapDestination(destination, false);
+						break;
+					case "l":
+						destination[COLUMN] -= horizontalMoves;
+						wrapDestination(destination, false);
+						break;
+					case "r":
 						destination[COLUMN] += horizontalMoves;
 						wrapDestination(destination, false);
 						break;
@@ -287,6 +383,8 @@ public class Traversal {
 	}
 
 	private static String[][] generatePlayerMap(int requestedTurn) {
+		requestedTurn += playerOffset;
+
 		String[][] playerMap = new String[rows][columns];
 		int[] startLoc = new int[2];
 		String pieceUsed = "!";
@@ -339,6 +437,8 @@ public class Traversal {
 			}
 			counter++;
 		}
+		//	to fix, add offset that only affects the mapPlayer by adding to its internal turn
+		wrapDestination(currentLoc, true);
 
 		for(int i = 0; i < rows; i++) {
 			for(int j = 0; j < columns; j++) {
@@ -376,6 +476,7 @@ public class Traversal {
 		}
 
 		if(moveType.equalsIgnoreCase("horizontal")) {
+			horizontalMoves -= playerOffset;
 			return horizontalMoves;
 		}
 		else if(moveType.equalsIgnoreCase("vertical")) {
@@ -424,22 +525,19 @@ public class Traversal {
 	}
 
 	private static void gameWin() {
-		System.out.println("You won!");
-		quit();
+		quit("You won!");
 	}
 
 	private static void gameLose() {
-		System.out.println("You lost!");
-		quit();
+		quit("You lost!");
 	}
 
-	private static void quit() {
-		displayBoard();
+	private static void quit(String quitMessage) {
+		System.out.println(quitMessage);
 		System.exit(0);
 	}
 
 	private static void invalidMove() {
-		System.out.println("Invalid move!");
-		quit();
+		quit("Invalid move!");
 	}
 }
