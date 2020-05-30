@@ -5,22 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c964468-a7bb-40d0-b70b-cf73349fa2fa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Traversal/Traversal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Traversal/Traversal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Traversal/princeton/StdArrayIO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Traversal/princeton/StdArrayIO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Traversal/princeton/StdDraw.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Traversal/princeton/StdOut.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Traversal/princeton/StdOut.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Traversal/princeton/StdRandom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Traversal/princeton/StdRandom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Traversal/princeton/StdStats.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/board_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/board_test.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/moves_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/moves_test.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Traversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traversal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/princeton/StdArrayIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/princeton/StdArrayIO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/princeton/StdDraw.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/princeton/StdOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/princeton/StdOut.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/princeton/StdRandom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/princeton/StdRandom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/princeton/StdStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StdStats.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,16 +20,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Traversal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="110" column="39" lean-forward="true" selection-start-line="110" selection-start-column="39" selection-end-line="110" selection-end-column="39" />
+            <state relative-caret-position="540">
+              <caret line="54" column="68" lean-forward="true" selection-start-line="54" selection-start-column="68" selection-end-line="54" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#14302#14303#0" expanded="true" />
-                <element signature="e#14325#14326#0" expanded="true" />
-                <element signature="e#14360#14361#0" expanded="true" />
-                <element signature="e#14384#14385#0" expanded="true" />
-                <element signature="e#14527#14528#0" expanded="true" />
-                <element signature="e#14555#14556#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -69,19 +50,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/StdDraw.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
+            <state relative-caret-position="15606">
               <caret line="908" column="36" selection-start-line="908" selection-start-column="36" selection-end-line="908" selection-end-column="36" />
-              <folding>
-                <element signature="e#5602#5648#0" expanded="true" />
-                <element signature="e#5653#5701#0" expanded="true" />
-              </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/images/tvl_dh.png">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -151,9 +123,9 @@
         <option value="$PROJECT_DIR$/src/StdArrayIO.java" />
         <option value="$PROJECT_DIR$/src/princeton/StdStats.java" />
         <option value="$PROJECT_DIR$/src/StdStats.java" />
-        <option value="$PROJECT_DIR$/src/Traversal.java" />
         <option value="$PROJECT_DIR$/samples/moves_test.txt" />
         <option value="$PROJECT_DIR$/samples/board_test.txt" />
+        <option value="$PROJECT_DIR$/src/Traversal.java" />
       </list>
     </option>
   </component>
@@ -168,6 +140,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -189,12 +162,13 @@
             <path>
               <item name="Traversal" type="b2602c69:ProjectViewProjectNode" />
               <item name="Traversal" type="462c0819:PsiDirectoryNode" />
-              <item name="samples" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Traversal" type="b2602c69:ProjectViewProjectNode" />
               <item name="Traversal" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="princeton" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Traversal" type="b2602c69:ProjectViewProjectNode" />
@@ -205,7 +179,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -214,7 +187,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="add_unversioned_files" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590701316014" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590845157506" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -292,7 +265,7 @@
       <window_info id="Capture Tool" order="4" />
       <window_info id="Learn" order="5" />
       <window_info id="Structure" order="6" sideWeight="0.50050455" side_tool="true" weight="0.13326226" />
-      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.49949545" visible="true" weight="0.13326226" />
+      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.49949545" visible="true" weight="0.1380597" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
@@ -311,7 +284,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
-      <window_info active="true" anchor="right" id="Run" order="8" visible="true" weight="0.25053304" />
+      <window_info active="true" anchor="right" id="Run" order="8" visible="true" weight="0.25266525" />
     </layout>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -319,7 +292,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/board_14.txt" />
     <entry file="file://$PROJECT_DIR$/board_01.txt" />
     <entry file="file://$PROJECT_DIR$/moves_01.txt" />
     <entry file="file://$PROJECT_DIR$/moves_02.txt" />
@@ -462,16 +434,6 @@
     <entry file="file://$PROJECT_DIR$/samples/output_14.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StdDraw.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="168" column="79" lean-forward="true" selection-start-line="168" selection-start-column="79" selection-end-line="168" selection-end-column="79" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/princeton/BinaryIn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -511,24 +473,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/images/tvl_dh.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StdDraw.java">
+    <entry file="file://$PROJECT_DIR$/src/princeton/StdIn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="908" column="36" selection-start-line="908" selection-start-column="36" selection-end-line="908" selection-end-column="36" />
-          <folding>
-            <element signature="e#5602#5648#0" expanded="true" />
-            <element signature="e#5653#5701#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="214">
+          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/samples/moves_test.txt">
+    <entry file="file://$PROJECT_DIR$/assets/images/tvl_dh.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Traversal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        <state relative-caret-position="540">
+          <caret line="54" column="68" lean-forward="true" selection-start-line="54" selection-start-column="68" selection-end-line="54" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -539,19 +500,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Traversal.java">
+    <entry file="file://$PROJECT_DIR$/samples/moves_test.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="110" column="39" lean-forward="true" selection-start-line="110" selection-start-column="39" selection-end-line="110" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#14302#14303#0" expanded="true" />
-            <element signature="e#14325#14326#0" expanded="true" />
-            <element signature="e#14360#14361#0" expanded="true" />
-            <element signature="e#14384#14385#0" expanded="true" />
-            <element signature="e#14527#14528#0" expanded="true" />
-            <element signature="e#14555#14556#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StdDraw.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15606">
+          <caret line="908" column="36" selection-start-line="908" selection-start-column="36" selection-end-line="908" selection-end-column="36" />
         </state>
       </provider>
     </entry>

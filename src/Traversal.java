@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -63,9 +64,9 @@ public class Traversal {
 			checkForConflicts(false, map1, map2, map3);
 
 			turn++;
-		}
 
-		drawBoard();
+			drawBoard();
+		}
 	}
 
 	private static void initialise() {
@@ -76,7 +77,7 @@ public class Traversal {
 			columns = scanFile.nextInt();
 			board = new String[rows][columns];
 			totalMoves = getTotalMoves();
-			moves = new String[totalMoves];
+			moves = new String[rows * columns];
 			quitTurn = findQuit();
 
 			try {
@@ -170,6 +171,8 @@ public class Traversal {
 		StdDraw.line(cornerDL[0], cornerDL[1], cornerDR[0], cornerDR[1]);
 		StdDraw.line(cornerDR[0], cornerDR[1], cornerUR[0], cornerUR[1]);
 		StdDraw.line(cornerUR[0], cornerUR[1], cornerUL[0], cornerUL[1]);
+
+		StdDraw.show(0);
 
 		System.out.println(Arrays.deepToString(grid));
 
