@@ -7,7 +7,9 @@
     <list default="true" id="1c964468-a7bb-40d0-b70b-cf73349fa2fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Traversal/Traversal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Traversal/Traversal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Traversal/princeton/StdIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Traversal/princeton/StdIn.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Traversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traversal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/princeton/StdIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/princeton/StdIn.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,10 +22,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Traversal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="54" column="68" lean-forward="true" selection-start-line="54" selection-start-column="68" selection-end-line="54" selection-end-column="68" />
+            <state relative-caret-position="911">
+              <caret line="614" column="13" lean-forward="true" selection-start-line="614" selection-start-column="13" selection-end-line="614" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#16115#16116#0" expanded="true" />
+                <element signature="e#16138#16139#0" expanded="true" />
+                <element signature="e#16173#16174#0" expanded="true" />
+                <element signature="e#16197#16198#0" expanded="true" />
+                <element signature="e#16340#16341#0" expanded="true" />
+                <element signature="e#16368#16369#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -50,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/StdDraw.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15606">
-              <caret line="908" column="36" selection-start-line="908" selection-start-column="36" selection-end-line="908" selection-end-column="36" />
+            <state relative-caret-position="4241">
+              <caret line="1094" column="40" lean-forward="true" selection-start-line="1094" selection-start-column="40" selection-end-line="1094" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -85,6 +93,11 @@
       <find>System.out</find>
       <find>displayBoard</find>
       <find>show</find>
+      <find>moves</find>
+      <find>getMovesAtTurn</find>
+      <find>keyboard</find>
+      <find>drawBoard</find>
+      <find>keyLock</find>
     </findStrings>
     <replaceStrings>
       <replace>nextInt</replace>
@@ -162,6 +175,11 @@
             <path>
               <item name="Traversal" type="b2602c69:ProjectViewProjectNode" />
               <item name="Traversal" type="462c0819:PsiDirectoryNode" />
+              <item name="samples" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Traversal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Traversal" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -187,7 +205,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="add_unversioned_files" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590845157506" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590963377088" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -448,13 +466,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/princeton/StdArrayIO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/StdStats.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
@@ -473,23 +484,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/princeton/StdIn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/images/tvl_dh.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Traversal.java">
+    <entry file="file://$PROJECT_DIR$/samples/moves_test.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="54" column="68" lean-forward="true" selection-start-line="54" selection-start-column="68" selection-end-line="54" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/princeton/StdArrayIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3287">
+          <caret line="54" column="77" lean-forward="true" selection-start-line="54" selection-start-column="77" selection-end-line="54" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/princeton/In.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="67" column="30" lean-forward="true" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/princeton/StdIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="38" column="41" lean-forward="true" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -500,17 +522,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/samples/moves_test.txt">
+    <entry file="file://$PROJECT_DIR$/src/StdDraw.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        <state relative-caret-position="4241">
+          <caret line="1094" column="40" lean-forward="true" selection-start-line="1094" selection-start-column="40" selection-end-line="1094" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StdDraw.java">
+    <entry file="file://$PROJECT_DIR$/src/Traversal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15606">
-          <caret line="908" column="36" selection-start-line="908" selection-start-column="36" selection-end-line="908" selection-end-column="36" />
+        <state relative-caret-position="911">
+          <caret line="614" column="13" lean-forward="true" selection-start-line="614" selection-start-column="13" selection-end-line="614" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#16115#16116#0" expanded="true" />
+            <element signature="e#16138#16139#0" expanded="true" />
+            <element signature="e#16173#16174#0" expanded="true" />
+            <element signature="e#16197#16198#0" expanded="true" />
+            <element signature="e#16340#16341#0" expanded="true" />
+            <element signature="e#16368#16369#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

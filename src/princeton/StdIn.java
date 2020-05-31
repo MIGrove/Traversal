@@ -1,7 +1,6 @@
-package princeton;
-/*************************************************************************
- *  Compilation:  javac StdIn.java
- *  Execution:    java StdIn   (interactive test of basic functionality)
+package princeton; /*************************************************************************
+ *  Compilation:  javac princeton.StdIn.java
+ *  Execution:    java princeton.StdIn   (interactive test of basic functionality)
  *
  *  Reads in data of various types from standard input.
  *
@@ -30,7 +29,7 @@ public final class StdIn {
 
     private static Scanner scanner;
  
-    /*** begin: section (1 of 2) of code duplicated from In to StdIn */
+    /*** begin: section (1 of 2) of code duplicated from In to princeton.StdIn */
     
     // assume Unicode UTF-8 encoding
     private static final String charsetName = "UTF-8";
@@ -53,9 +52,9 @@ public final class StdIn {
     private static final Pattern EVERYTHING_PATTERN
         = Pattern.compile("\\A");
 
-    /*** end: section (1 of 2) of code duplicated from In to StdIn */
+    /*** end: section (1 of 2) of code duplicated from In to princeton.StdIn */
 
-    /*** begin: section (2 of 2) of code duplicated from In to StdIn,
+    /*** begin: section (2 of 2) of code duplicated from In to princeton.StdIn,
       *  with all methods changed from "public" to "public static" ***/
 
    /**
@@ -225,11 +224,11 @@ public final class StdIn {
         return vals;
     }
     
-    /*** end: section (2 of 2) of code duplicated from In to StdIn */
+    /*** end: section (2 of 2) of code duplicated from In to princeton.StdIn */
     
     
     /**
-     * If StdIn changes, use this to reinitialize the scanner.
+     * If princeton.StdIn changes, use this to reinitialize the scanner.
      */
     private static void resync() {
         setScanner(new Scanner(new java.io.BufferedInputStream(System.in), 
@@ -241,7 +240,7 @@ public final class StdIn {
         StdIn.scanner.useLocale(usLocale);
     }
 
-    // do this once when StdIn is initialized
+    // do this once when princeton.StdIn is initialized
     static {
         resync();
     }

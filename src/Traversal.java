@@ -8,9 +8,10 @@ import java.util.Scanner;
 //	NB: As OOP, or more specifically objects, are not allowed in this project, every method has been made static.
 
 public class Traversal {
-	private static int turn = 0, quitTurn, totalMoves;
+	private static int turn = 0, quitTurn;
 	private static int rows, columns;
 	private static int playerOffset = 0;
+	private static int movesCount = 0;
 	private static boolean gameOver = false;
 	private static String filepathBoard, filepathMoves;
 	private static String boardName;
@@ -52,7 +53,9 @@ public class Traversal {
 		initialise();
 
 		//	post-init.
-		while(!gameOver && turn <= totalMoves && turn != quitTurn) {
+		while(!gameOver && turn != quitTurn) {
+			waitForKeyPress();
+
 			String[][] map0 = generateBlankMap();
 			String[][] map1 = generateMiscMap(turn);
 			String[][] map2 = generateMoverMap(turn);
@@ -76,10 +79,10 @@ public class Traversal {
 			rows = scanFile.nextInt();
 			columns = scanFile.nextInt();
 			board = new String[rows][columns];
-			totalMoves = getTotalMoves();
 			moves = new String[rows * columns];
 			quitTurn = findQuit();
 
+			/*
 			try {
 				Scanner scanMoves = new Scanner(new File(filepathMoves)).useDelimiter("");
 				int i = 0;
@@ -91,9 +94,27 @@ public class Traversal {
 			catch(FileNotFoundException fnfex) {
 				fnfex.printStackTrace();
 			}
+			*/
 		}
 		catch(FileNotFoundException fnfex) {
 			fnfex.printStackTrace();
+		}
+	}
+
+	private static void waitForKeyPress() {
+		if(turn == 0) {
+			moves[0] = "j";
+		}
+		else {
+			boolean keyPressed = false;
+
+			while(!keyPressed) {
+				if(StdDraw.hasNextKeyTyped()) {
+					keyPressed = true;
+					moves[movesCount] = StdDraw.nextKeyTyped() + "";
+					movesCount++;
+				}
+			}
 		}
 	}
 
@@ -172,7 +193,7 @@ public class Traversal {
 		StdDraw.line(cornerDR[0], cornerDR[1], cornerUR[0], cornerUR[1]);
 		StdDraw.line(cornerUR[0], cornerUR[1], cornerUL[0], cornerUL[1]);
 
-		StdDraw.show(0);
+		StdDraw.show(32);
 
 		System.out.println(Arrays.deepToString(grid));
 
@@ -541,6 +562,7 @@ public class Traversal {
 	private static int getMovesAtTurn(int requestedTurn, String moveType) {
 		int verticalMoves = 0, horizontalMoves = 0;
 
+		/*
 		try {
 			Scanner scanMoves = new Scanner(new File(filepathMoves)).useDelimiter("");
 			for(int i = 0; i < requestedTurn; i++) {
@@ -557,6 +579,19 @@ public class Traversal {
 		}
 		catch(FileNotFoundException fnfex) {
 			fnfex.printStackTrace();
+		}
+		*/
+
+		for(int i = 0; i < moves.length - 1; i++) {
+			String move = moves[i];
+
+			if(i < requestedTurn) {
+				if (move.equals("j") || move.equals("k")) {
+					verticalMoves++;
+				} else if (move.equals("h") || move.equals("l")) {
+					horizontalMoves++;
+				}
+			}
 		}
 
 		if(moveType.equalsIgnoreCase("horizontal")) {
