@@ -14,6 +14,7 @@ public class Traversal {
 	private static int keyChanges = 0;
 	private static int hMoves = 0, vMoves = 0;
 	private static boolean gameOver = false;
+	private static boolean readFromArgs = true;
 	private static String filepathBoard, filepathMoves;
 	private static File boardFile, movesFile;
 	private static String boardName;
@@ -45,23 +46,27 @@ public class Traversal {
 	 */
 
 	public static void main(String[] args) {
-		textMode = false;
-		filepathBoard = args[0];
+		if(readFromArgs) {
+			textMode = false;
+			filepathBoard = args[0];
 
-		if(!args[1].equals(null)) {
-			filepathMoves = args[1];
+			if(args.length != 1) {
+				filepathMoves = args[1];
+				textMode = true;
+				movesFile = new File(filepathMoves);
+			}
+
+			boardFile = new File(filepathBoard);
+		}
+		else {
+			filepathBoard = "board_test.txt";
+			filepathMoves = "moves_test.txt";
+
+			boardFile = new File(filepathBoard);
+			movesFile = new File(filepathMoves);
+
 			textMode = true;
 		}
-
-		/*
-		filepathBoard = "samples\\board_test.txt";
-		filepathMoves = "samples\\moves_test.txt";
-
-		boardFile = new File(filepathBoard);
-		movesFile = new File(filepathMoves);
-
-		textMode = true;
-		*/
 
 		//	initialisation
 		initialise();
@@ -82,7 +87,7 @@ public class Traversal {
 			board = mergeMaps(map0, map1, map2, map3, map4, map5);
 
 			displayBoardText();
-			checkForConflicts(true, map1, map2, map3, map4, map5);
+			checkForConflicts(false, map1, map2, map3, map4, map5);
 
 			turn++;
 
@@ -294,26 +299,31 @@ public class Traversal {
 	}
 
 	private static int findQuit() {
-		try {
-			Scanner scanMoves = new Scanner(movesFile).useDelimiter("");
-			int currentTurn = 0;
+		if(textMode) {
+			try {
+				Scanner scanMoves = new Scanner(movesFile).useDelimiter("");
+				int currentTurn = 0;
 
-			while(scanMoves.hasNext()) {
-				String move = scanMoves.next();
+				while(scanMoves.hasNext()) {
+					String move = scanMoves.next();
 
-				if(move.equalsIgnoreCase("x")) {
-					return (currentTurn + 1);
+					if(move.equalsIgnoreCase("x")) {
+						return (currentTurn + 1);
+					}
+
+					currentTurn++;
 				}
-
-				currentTurn++;
+				scanMoves.close();
 			}
-			scanMoves.close();
-		}
-		catch(FileNotFoundException fnfex) {
-			fnfex.printStackTrace();
-		}
+			catch(FileNotFoundException fnfex) {
+				fnfex.printStackTrace();
+			}
 
-		return -1;
+			return -1;
+		}
+		else {
+			return 1000;
+		}
 	}
 
 	private static int getTotalMoves() {
@@ -432,8 +442,6 @@ public class Traversal {
 											usedKeys.add(newKeyList);
 										}
 									}
-
-									System.out.println(usedKeys.toString());
 
 									if(newKeyChange) {
 										keyChanges++;

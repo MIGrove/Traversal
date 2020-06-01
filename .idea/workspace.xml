@@ -5,10 +5,76 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c964468-a7bb-40d0-b70b-cf73349fa2fa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/tvl_dh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/tvl_dv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/tvl_e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/tvl_k0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/tvl_k1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/tvl_lh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/tvl_lv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/tvl_p0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/tvl_p1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/tvl_rh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/tvl_rv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/tvl_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/tvl_sh0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/tvl_sh1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/tvl_sv0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/tvl_sv1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/tvl_t.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/tvl_uh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/tvl_uv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/tvl_x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sounds/move.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sounds/start.wav" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Traversal/Traversal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Traversal/Traversal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/board_01.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/board_02.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/board_03.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/board_04.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/board_05.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/board_06.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/board_07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/board_08.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/board_09.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/board_10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/board_11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/board_12.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/board_13.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/board_14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/board_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/moves_01.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/moves_02.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/moves_03.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/moves_04.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/moves_05.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/moves_06.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/moves_07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/moves_08.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/moves_09.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/moves_10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/moves_11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/moves_12.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/moves_13.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/moves_14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/moves_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/output_01.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/output_02.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/output_03.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/output_04.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/output_05.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/output_06.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/output_07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/output_08.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/output_09.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/output_10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/output_11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/output_12.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/output_13.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/output_14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Traversal.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traversal.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Traversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traversal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/princeton/StdAudio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StdAudio.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,37 +87,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Traversal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="875">
-              <caret line="86" column="19" selection-start-line="86" selection-start-column="19" selection-end-line="86" selection-end-column="19" />
+            <state relative-caret-position="738">
+              <caret line="89" column="67" lean-forward="true" selection-start-line="89" selection-start-column="67" selection-end-line="89" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#22887#22888#0" expanded="true" />
-                <element signature="e#22910#22911#0" expanded="true" />
-                <element signature="e#22945#22946#0" expanded="true" />
-                <element signature="e#22969#22970#0" expanded="true" />
-                <element signature="e#23112#23113#0" expanded="true" />
-                <element signature="e#23140#23141#0" expanded="true" />
+                <element signature="e#23061#23062#0" expanded="true" />
+                <element signature="e#23120#23121#0" expanded="true" />
+                <element signature="e#23291#23292#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/samples/board_test.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/board_test.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/samples/moves_test.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="4" selection-start-column="4" selection-end-column="4" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/moves_test.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -65,7 +120,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fileNameMoves</find>
       <find>filePath</find>
       <find>destinationPos</find>
       <find>wrapDestination</find>
@@ -95,6 +149,7 @@
       <find>keyChanges</find>
       <find>newKey</find>
       <find>i</find>
+      <find>System.out.print</find>
     </findStrings>
     <replaceStrings>
       <replace>nextInt</replace>
@@ -165,22 +220,6 @@
             <path>
               <item name="Traversal" type="b2602c69:ProjectViewProjectNode" />
               <item name="Traversal" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Traversal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Traversal" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="sounds" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Traversal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Traversal" type="462c0819:PsiDirectoryNode" />
-              <item name="samples" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Traversal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Traversal" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -200,7 +239,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="add_unversioned_files" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591046870738" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591048123255" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -208,15 +247,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Matthew\Documents\GitHub\Traversal" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Matthew\Documents\GitHub\Traversal\src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="princeton" />
       <recent name="" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Matthew\Documents\GitHub\Traversal\src" />
+      <recent name="C:\Users\Matthew\Documents\GitHub\Traversal" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -278,7 +318,7 @@
       <window_info id="Capture Tool" order="4" />
       <window_info id="Learn" order="5" />
       <window_info id="Structure" order="6" sideWeight="0.50050455" side_tool="true" weight="0.13326226" />
-      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.49949545" visible="true" weight="0.1380597" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.49949545" visible="true" weight="0.1380597" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
@@ -297,7 +337,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
-      <window_info active="true" anchor="right" id="Run" order="8" visible="true" weight="0.32142857" />
+      <window_info anchor="right" id="Run" order="8" weight="0.32142857" />
     </layout>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -305,9 +345,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/board_01.txt" />
-    <entry file="file://$PROJECT_DIR$/moves_01.txt" />
-    <entry file="file://$PROJECT_DIR$/moves_02.txt" />
     <entry file="file://$PROJECT_DIR$/board_test.txt" />
     <entry file="file://$PROJECT_DIR$/samples/moves_13.txt">
       <provider selected="true" editor-type-id="text-editor" />
@@ -525,18 +562,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/boards/board_01.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/board_test.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/moves_test.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Traversal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="875">
-          <caret line="86" column="19" selection-start-line="86" selection-start-column="19" selection-end-line="86" selection-end-column="19" />
+        <state relative-caret-position="738">
+          <caret line="89" column="67" lean-forward="true" selection-start-line="89" selection-start-column="67" selection-end-line="89" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#22887#22888#0" expanded="true" />
-            <element signature="e#22910#22911#0" expanded="true" />
-            <element signature="e#22945#22946#0" expanded="true" />
-            <element signature="e#22969#22970#0" expanded="true" />
-            <element signature="e#23112#23113#0" expanded="true" />
-            <element signature="e#23140#23141#0" expanded="true" />
+            <element signature="e#23061#23062#0" expanded="true" />
+            <element signature="e#23120#23121#0" expanded="true" />
+            <element signature="e#23291#23292#0" expanded="true" />
           </folding>
         </state>
       </provider>
