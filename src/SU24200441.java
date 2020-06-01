@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 //	NB: As OOP, or more specifically objects, are not allowed in this project, every method has been made static.
 
-public class Traversal {
+public class SU24200441 {
 	private static boolean textMode;
 	private static int turn = 0, quitTurn;
 	private static int rows, columns;
