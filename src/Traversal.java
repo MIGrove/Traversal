@@ -1,8 +1,5 @@
-import sun.net.idn.StringPrep;
-
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -14,8 +11,6 @@ public class Traversal {
 	private static int turn = 0, quitTurn;
 	private static int rows, columns;
 	private static int playerOffset = 0;
-	//private static int movesCount = 0;
-	private static int keyArrCounter = 0;
 	private static int keyChanges = 0;
 	private static int hMoves = 0, vMoves = 0;
 	private static boolean gameOver = false;
@@ -50,23 +45,23 @@ public class Traversal {
 	 */
 
 	public static void main(String[] args) {
-		/*
 		textMode = false;
-
 		filepathBoard = args[0];
+
 		if(!args[1].equals(null)) {
 			filepathMoves = args[1];
 			textMode = true;
 		}
-		*/
 
+		/*
 		filepathBoard = "samples\\board_test.txt";
 		filepathMoves = "samples\\moves_test.txt";
 
 		boardFile = new File(filepathBoard);
 		movesFile = new File(filepathMoves);
 
-		textMode = false;
+		textMode = true;
+		*/
 
 		//	initialisation
 		initialise();
@@ -91,8 +86,13 @@ public class Traversal {
 
 			turn++;
 
+			if(!textMode) {
+				drawBoard();
 
-			if(!textMode) { drawBoard(); }
+				//	audio sourced from:		https://www.zapsplat.com/sound-effect-category/game-sounds/page/6/
+				if(turn != 1) { StdAudio.play("assets\\sounds\\move.wav"); }
+				else { StdAudio.play("assets\\sounds\\start.wav"); }
+			}
 		}
 	}
 
@@ -110,10 +110,8 @@ public class Traversal {
 			if(textMode) {
 				try {
 					Scanner scanMoves = new Scanner(movesFile).useDelimiter("");
-					int i = 0;
 					while(scanMoves.hasNext()) {
-						moves.set(i, scanMoves.next());
-						i++;
+						moves.add(scanMoves.next());
 					}
 				}
 				catch(FileNotFoundException fnfex) {
@@ -231,7 +229,7 @@ public class Traversal {
 									newKey = false;
 								}
 							}
-							
+
 							if(newKey) {
 								StdDraw.picture(cell[0], cell[1], "assets\\images\\tvl_k1.png", width, height);
 							}

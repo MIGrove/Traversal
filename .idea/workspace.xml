@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c964468-a7bb-40d0-b70b-cf73349fa2fa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Traversal/Traversal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Traversal/Traversal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/board_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/board_test.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Traversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traversal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/princeton/StdAudio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StdAudio.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,13 +21,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Traversal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="233" column="28" lean-forward="true" selection-start-line="233" selection-start-column="28" selection-end-line="233" selection-end-column="28" />
+            <state relative-caret-position="875">
+              <caret line="86" column="19" selection-start-line="86" selection-start-column="19" selection-end-line="86" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#22854#22855#0" expanded="true" />
-                <element signature="e#22913#22914#0" expanded="true" />
-                <element signature="e#23084#23085#0" expanded="true" />
+                <element signature="e#22887#22888#0" expanded="true" />
+                <element signature="e#22910#22911#0" expanded="true" />
+                <element signature="e#22945#22946#0" expanded="true" />
+                <element signature="e#22969#22970#0" expanded="true" />
+                <element signature="e#23112#23113#0" expanded="true" />
+                <element signature="e#23140#23141#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -50,15 +54,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/StdDraw.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4241">
-              <caret line="1094" column="40" lean-forward="true" selection-start-line="1094" selection-start-column="40" selection-end-line="1094" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -70,7 +65,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fileNameBoard</find>
       <find>fileNameMoves</find>
       <find>filePath</find>
       <find>destinationPos</find>
@@ -100,6 +94,7 @@
       <find>usedKeys</find>
       <find>keyChanges</find>
       <find>newKey</find>
+      <find>i</find>
     </findStrings>
     <replaceStrings>
       <replace>nextInt</replace>
@@ -143,6 +138,7 @@
         <option value="$PROJECT_DIR$/src/StdStats.java" />
         <option value="$PROJECT_DIR$/samples/moves_test.txt" />
         <option value="$PROJECT_DIR$/samples/board_test.txt" />
+        <option value="$PROJECT_DIR$/src/StdAudio.java" />
         <option value="$PROJECT_DIR$/src/Traversal.java" />
       </list>
     </option>
@@ -175,7 +171,7 @@
               <item name="Traversal" type="b2602c69:ProjectViewProjectNode" />
               <item name="Traversal" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="sounds" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Traversal" type="b2602c69:ProjectViewProjectNode" />
@@ -186,12 +182,6 @@
               <item name="Traversal" type="b2602c69:ProjectViewProjectNode" />
               <item name="Traversal" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Traversal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Traversal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="princeton" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Traversal" type="b2602c69:ProjectViewProjectNode" />
@@ -210,7 +200,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="add_unversioned_files" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591045586247" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591046870738" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -333,16 +323,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/samples/moves_06.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/princeton/StdAudio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/princeton/BinaryStdIn.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -513,10 +493,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/samples/board_test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/StdDraw.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4241">
-          <caret line="1094" column="40" lean-forward="true" selection-start-line="1094" selection-start-column="40" selection-end-line="1094" selection-end-column="40" />
+          <caret line="1094" column="40" selection-start-line="1094" selection-start-column="40" selection-end-line="1094" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StdAudio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1530">
+          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -527,22 +525,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/samples/board_test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Traversal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="233" column="28" lean-forward="true" selection-start-line="233" selection-start-column="28" selection-end-line="233" selection-end-column="28" />
+        <state relative-caret-position="875">
+          <caret line="86" column="19" selection-start-line="86" selection-start-column="19" selection-end-line="86" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#22854#22855#0" expanded="true" />
-            <element signature="e#22913#22914#0" expanded="true" />
-            <element signature="e#23084#23085#0" expanded="true" />
+            <element signature="e#22887#22888#0" expanded="true" />
+            <element signature="e#22910#22911#0" expanded="true" />
+            <element signature="e#22945#22946#0" expanded="true" />
+            <element signature="e#22969#22970#0" expanded="true" />
+            <element signature="e#23112#23113#0" expanded="true" />
+            <element signature="e#23140#23141#0" expanded="true" />
           </folding>
         </state>
       </provider>
