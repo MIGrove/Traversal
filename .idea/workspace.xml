@@ -20,16 +20,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Traversal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="30" column="6" lean-forward="true" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
+            <state relative-caret-position="630">
+              <caret line="233" column="28" lean-forward="true" selection-start-line="233" selection-start-column="28" selection-end-line="233" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#19191#19192#0" expanded="true" />
-                <element signature="e#19214#19215#0" expanded="true" />
-                <element signature="e#19249#19250#0" expanded="true" />
-                <element signature="e#19273#19274#0" expanded="true" />
-                <element signature="e#19416#19417#0" expanded="true" />
-                <element signature="e#19444#19445#0" expanded="true" />
+                <element signature="e#22854#22855#0" expanded="true" />
+                <element signature="e#22913#22914#0" expanded="true" />
+                <element signature="e#23084#23085#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -38,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/samples/board_test.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+            <state relative-caret-position="108">
+              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -73,8 +70,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>read</find>
-      <find>columns</find>
       <find>fileNameBoard</find>
       <find>fileNameMoves</find>
       <find>filePath</find>
@@ -98,8 +93,13 @@
       <find>new File(filepathBoard)</find>
       <find>new File(filepathMoves)</find>
       <find>waitForKeyPress</find>
-      <find>moves</find>
       <find>getTotalMoves</find>
+      <find>moves</find>
+      <find>keyChange</find>
+      <find>playerOffset</find>
+      <find>usedKeys</find>
+      <find>keyChanges</find>
+      <find>newKey</find>
     </findStrings>
     <replaceStrings>
       <replace>nextInt</replace>
@@ -118,6 +118,7 @@
       <replace>displayBoardText</replace>
       <replace>boardFile</replace>
       <replace>movesFile</replace>
+      <replace>newKeyChange</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -209,7 +210,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="add_unversioned_files" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590971697306" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591045586247" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -279,7 +280,7 @@
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="top" id="Messages" order="0" weight="0.18466195" />
+      <window_info anchor="top" id="Messages" order="0" weight="0.18869829" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="Image Layers" order="1" />
       <window_info id="Designer" order="2" />
@@ -528,23 +529,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/samples/board_test.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        <state relative-caret-position="108">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Traversal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="30" column="6" lean-forward="true" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
+        <state relative-caret-position="630">
+          <caret line="233" column="28" lean-forward="true" selection-start-line="233" selection-start-column="28" selection-end-line="233" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#19191#19192#0" expanded="true" />
-            <element signature="e#19214#19215#0" expanded="true" />
-            <element signature="e#19249#19250#0" expanded="true" />
-            <element signature="e#19273#19274#0" expanded="true" />
-            <element signature="e#19416#19417#0" expanded="true" />
-            <element signature="e#19444#19445#0" expanded="true" />
+            <element signature="e#22854#22855#0" expanded="true" />
+            <element signature="e#22913#22914#0" expanded="true" />
+            <element signature="e#23084#23085#0" expanded="true" />
           </folding>
         </state>
       </provider>

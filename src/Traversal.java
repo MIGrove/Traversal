@@ -14,14 +14,18 @@ public class Traversal {
 	private static int turn = 0, quitTurn;
 	private static int rows, columns;
 	private static int playerOffset = 0;
-	private static int movesCount = 0;
+	//private static int movesCount = 0;
+	private static int keyArrCounter = 0;
+	private static int keyChanges = 0;
+	private static int hMoves = 0, vMoves = 0;
 	private static boolean gameOver = false;
 	private static String filepathBoard, filepathMoves;
 	private static File boardFile, movesFile;
 	private static String boardName;
 	private static ArrayList<String> placementQueue = new ArrayList<>();
 	private static String[][] board;
-	private static String[] moves;
+	private static ArrayList<String> moves = new ArrayList<>();
+	private static ArrayList<ArrayList<Integer>> usedKeys = new ArrayList<>();
 	private static String[] moverTypes = new String[] {
 			"u", "d", "l", "r",
 			"U", "D", "L", "R"
@@ -69,20 +73,24 @@ public class Traversal {
 
 		//	post-init.
 		while(!gameOver && turn != quitTurn && ((textMode && turn <= getTotalMoves()) || !textMode)) {
-			if(!textMode) { waitForKeyPress(); }
+			if(!textMode && turn != 0) {
+				waitForKeyPress();
+			}
 
 			String[][] map0 = generateBlankMap();
 			String[][] map1 = generateMiscMap(turn);
 			String[][] map2 = generateMoverMap(turn);
 			String[][] map3 = generateSwitcherMap(turn);
-			String[][] map4 = generatePlayerMap(turn);
+			String[][] map4 = generatePortsMap();
+			String[][] map5 = generatePlayerMap(turn);
 
-			board = mergeMaps(map0, map1, map2, map3, map4);
+			board = mergeMaps(map0, map1, map2, map3, map4, map5);
 
 			displayBoardText();
-			checkForConflicts(true, map1, map2, map3, map4);
+			checkForConflicts(true, map1, map2, map3, map4, map5);
 
 			turn++;
+
 
 			if(!textMode) { drawBoard(); }
 		}
@@ -95,7 +103,6 @@ public class Traversal {
 			rows = scanFile.nextInt();
 			columns = scanFile.nextInt();
 			board = new String[rows][columns];
-			moves = new String[rows * columns];
 			quitTurn = findQuit();
 
 			if(!textMode) { StdDraw.setCanvasSize(1920, 1080); }
@@ -105,7 +112,7 @@ public class Traversal {
 					Scanner scanMoves = new Scanner(movesFile).useDelimiter("");
 					int i = 0;
 					while(scanMoves.hasNext()) {
-						moves[i] = scanMoves.next();
+						moves.set(i, scanMoves.next());
 						i++;
 					}
 				}
@@ -120,17 +127,23 @@ public class Traversal {
 	}
 
 	private static void waitForKeyPress() {
-		if(turn == 0) {
-			moves[0] = "j";
-		}
-		else {
-			boolean keyPressed = false;
+		boolean keyPressed = false;
 
-			while(!keyPressed) {
-				if(StdDraw.hasNextKeyTyped()) {
-					keyPressed = true;
-					moves[movesCount] = StdDraw.nextKeyTyped() + "";
-					movesCount++;
+		while(!keyPressed) {
+			if(StdDraw.hasNextKeyTyped()) {
+				keyPressed = true;
+				String keyTyped = StdDraw.nextKeyTyped() + "";
+				moves.add(keyTyped);
+
+				switch(keyTyped) {
+					case "h":
+					case "l":
+						hMoves++;
+						break;
+					case "j":
+					case "k":
+						vMoves++;
+						break;
 				}
 			}
 		}
@@ -141,12 +154,9 @@ public class Traversal {
 		double aspectRatio = 0.5625;
 		double width = aspectRatio * 0.1;
 		double height = 0.1;
-		//double xValue = 1d / columns;
 		double xValue = (0.5 - (width * columns / 2)) + (width / 2);
-		//double yValue = 1 - (height / 2);
 		double yValue = (0.5 + (height * rows / 2)) - (height / 2);
 
-		//StdDraw.setCanvasSize(1920, 1080);
 		StdDraw.clear();
 
 		for(int i = 0; i < rows; i++) {
@@ -208,6 +218,34 @@ public class Traversal {
 					case "V":
 						StdDraw.picture(cell[0], cell[1], "assets\\images\\tvl_sv0.png", width, height);
 						break;
+					case "k":
+					case "K":
+						if(usedKeys.isEmpty()) {
+							StdDraw.picture(cell[0], cell[1], "assets\\images\\tvl_k1.png", width, height);
+						}
+						else {
+							boolean newKey = true;
+
+							for(ArrayList<Integer> usedKey : usedKeys) {
+								if(usedKey.get(0) == i && usedKey.get(1) == j) {
+									newKey = false;
+								}
+							}
+							
+							if(newKey) {
+								StdDraw.picture(cell[0], cell[1], "assets\\images\\tvl_k1.png", width, height);
+							}
+							else {
+								StdDraw.picture(cell[0], cell[1], "assets\\images\\tvl_k0.png", width, height);
+							}
+						}
+						break;
+					case "p":
+						StdDraw.picture(cell[0], cell[1], "assets\\images\\tvl_p1.png", width, height);
+						break;
+					case "P":
+						StdDraw.picture(cell[0], cell[1], "assets\\images\\tvl_p0.png", width, height);
+						break;
 				}
 				j++;
 			}
@@ -225,6 +263,36 @@ public class Traversal {
 		StdDraw.line(cornerUR[0], cornerUR[1], cornerUL[0], cornerUL[1]);
 
 		StdDraw.show(0);
+	}
+
+	private static int getKeyCount() {
+		int keyCount = 0;
+
+		try {
+			Scanner scanBoard = new Scanner(boardFile);
+
+			scanBoard.nextLine();
+			scanBoard.nextLine();
+
+			for(int i = 0; i < rows; i++) {
+				Scanner scanLine = new Scanner(scanBoard.nextLine()).useDelimiter("");
+
+				for(int j = 0; j < columns; j++) {
+					String piece = scanLine.next();
+
+					if(piece.equalsIgnoreCase("k")) {
+						keyCount++;
+					}
+				}
+				scanLine.close();
+			}
+			scanBoard.close();
+		}
+		catch(FileNotFoundException fnfex) {
+			fnfex.printStackTrace();
+		}
+
+		return keyCount;
 	}
 
 	private static int findQuit() {
@@ -324,12 +392,56 @@ public class Traversal {
 							boolean containsWall = contains(conflictingPieces, "x", "X");
 							boolean containsMover = contains(conflictingPieces, (Object[]) moverTypes);
 							boolean containsClosedSwitch = contains(conflictingPieces, "h", "v");
+							boolean containsClosedPort = contains(conflictingPieces, "p");
+							boolean containsKey = contains(conflictingPieces, "k", "K");
 
 							if(containsPlayer) {
 								if(containsTarget) {
 									gameWin();
 								}
-								else if(containsWall || containsMover || containsClosedSwitch) {
+								else if(containsKey) {
+									boolean newKeyChange = true;
+
+									if(usedKeys.isEmpty()) {
+										ArrayList<Integer> newKeyList = new ArrayList<>();
+										newKeyList.add(i);
+										newKeyList.add(j);
+
+										usedKeys.add(newKeyList);
+									}
+									else {
+										ArrayList<Integer> newKeyList = new ArrayList<>();
+										boolean newKey = true;
+										int row = -1, column = -1;
+
+										for(ArrayList<Integer> key : usedKeys) {
+											if(!(key.get(0) == i && key.get(1) == j)) {
+												row = i;
+												column = j;
+											}
+											else {
+												newKey = false;
+												newKeyChange = false;
+											}
+										}
+
+										if(newKey) {
+											newKeyList.add(row);
+											newKeyList.add(column);
+										}
+
+										if(!newKeyList.isEmpty()) {
+											usedKeys.add(newKeyList);
+										}
+									}
+
+									System.out.println(usedKeys.toString());
+
+									if(newKeyChange) {
+										keyChanges++;
+									}
+								}
+								else if(containsWall || containsMover || containsClosedSwitch || containsClosedPort) {
 									gameLose();
 								}
 							}
@@ -378,6 +490,50 @@ public class Traversal {
 		}
 
 		return mergedMap;
+	}
+
+	private static String[][] generatePortsMap() {
+		String[][] portsMap = new String[rows][columns];
+
+		try {
+			Scanner scanBoard = new Scanner(boardFile);
+
+			scanBoard.nextLine();
+			scanBoard.nextLine();
+
+			for(int i = 0; i < rows; i++) {
+				Scanner scanLine = new Scanner(scanBoard.nextLine()).useDelimiter("");
+
+				for(int j = 0; j < columns; j++) {
+					String piece = scanLine.next();
+
+					//System.out.println("keyChanges: " + keyChanges);
+					//System.out.println((keyChanges % 2 != 0));
+
+					switch(piece) {
+						case "k":
+						case "K":	//	key
+							portsMap[i][j] = piece;
+							break;
+						case "p":	//	closed port
+							portsMap[i][j] = (keyChanges % 2 != 0) ? "P" : "p";
+							break;
+						case "P":	//	open port
+							portsMap[i][j] = (keyChanges % 2 != 0) ? "P" : "p";
+							break;
+						default:
+							portsMap[i][j] = "?";
+					}
+				}
+				scanLine.close();
+			}
+			scanBoard.close();
+		}
+		catch(FileNotFoundException fnfex) {
+			fnfex.printStackTrace();
+		}
+
+		return portsMap;
 	}
 
 	private static String[][] generateSwitcherMap(int requestedTurn) {
@@ -658,6 +814,7 @@ public class Traversal {
 		return playerMap;
 	}
 
+	//	seems that getMovesAtTurn gets the moves one turn too late (delayed response results)
 	private static int getMovesAtTurn(int requestedTurn, String moveType) {
 		int verticalMoves = 0, horizontalMoves = 0;
 
@@ -681,17 +838,8 @@ public class Traversal {
 			}
 		}
 		else {
-			for(int i = 0; i < moves.length - 1; i++) {
-				String move = moves[i];
-
-				if(i < requestedTurn) {
-					if (move.equals("j") || move.equals("k")) {
-						verticalMoves++;
-					} else if (move.equals("h") || move.equals("l")) {
-						horizontalMoves++;
-					}
-				}
-			}
+			verticalMoves = vMoves;
+			horizontalMoves = hMoves;
 		}
 
 		if(moveType.equalsIgnoreCase("horizontal")) {
