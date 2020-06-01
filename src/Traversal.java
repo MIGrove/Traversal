@@ -1,3 +1,5 @@
+import sun.net.idn.StringPrep;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -8,12 +10,14 @@ import java.util.Scanner;
 //	NB: As OOP, or more specifically objects, are not allowed in this project, every method has been made static.
 
 public class Traversal {
+	private static boolean textMode;
 	private static int turn = 0, quitTurn;
 	private static int rows, columns;
 	private static int playerOffset = 0;
 	private static int movesCount = 0;
 	private static boolean gameOver = false;
 	private static String filepathBoard, filepathMoves;
+	private static File boardFile, movesFile;
 	private static String boardName;
 	private static ArrayList<String> placementQueue = new ArrayList<>();
 	private static String[][] board;
@@ -23,9 +27,7 @@ public class Traversal {
 			"U", "D", "L", "R"
 	};
 	private static String[] miscTypes = new String[] {
-			"t", "T", "x",
-			"X","h", "H", "v",
-			"V", "k", "p", "P"
+			"t", "T", "x", "X"
 	};
 
 	//	constants
@@ -44,37 +46,51 @@ public class Traversal {
 	 */
 
 	public static void main(String[] args) {
-		//filepathBoard = args[0];
-		//filepathMoves = args[1];
+		/*
+		textMode = false;
+
+		filepathBoard = args[0];
+		if(!args[1].equals(null)) {
+			filepathMoves = args[1];
+			textMode = true;
+		}
+		*/
+
 		filepathBoard = "samples\\board_test.txt";
 		filepathMoves = "samples\\moves_test.txt";
+
+		boardFile = new File(filepathBoard);
+		movesFile = new File(filepathMoves);
+
+		textMode = false;
 
 		//	initialisation
 		initialise();
 
 		//	post-init.
-		while(!gameOver && turn != quitTurn) {
-			waitForKeyPress();
+		while(!gameOver && turn != quitTurn && ((textMode && turn <= getTotalMoves()) || !textMode)) {
+			if(!textMode) { waitForKeyPress(); }
 
 			String[][] map0 = generateBlankMap();
 			String[][] map1 = generateMiscMap(turn);
 			String[][] map2 = generateMoverMap(turn);
-			String[][] map3 = generatePlayerMap(turn);
+			String[][] map3 = generateSwitcherMap(turn);
+			String[][] map4 = generatePlayerMap(turn);
 
-			board = mergeMaps(map0, map1, map2, map3);
+			board = mergeMaps(map0, map1, map2, map3, map4);
 
 			displayBoardText();
-			checkForConflicts(false, map1, map2, map3);
+			checkForConflicts(true, map1, map2, map3, map4);
 
 			turn++;
 
-			drawBoard();
+			if(!textMode) { drawBoard(); }
 		}
 	}
 
 	private static void initialise() {
 		try {
-			Scanner scanFile = new Scanner(new File(filepathBoard));
+			Scanner scanFile = new Scanner(boardFile);
 			boardName = scanFile.nextLine();
 			rows = scanFile.nextInt();
 			columns = scanFile.nextInt();
@@ -82,19 +98,21 @@ public class Traversal {
 			moves = new String[rows * columns];
 			quitTurn = findQuit();
 
-			/*
-			try {
-				Scanner scanMoves = new Scanner(new File(filepathMoves)).useDelimiter("");
-				int i = 0;
-				while(scanMoves.hasNext()) {
-					moves[i] = scanMoves.next();
-					i++;
+			if(!textMode) { StdDraw.setCanvasSize(1920, 1080); }
+
+			if(textMode) {
+				try {
+					Scanner scanMoves = new Scanner(movesFile).useDelimiter("");
+					int i = 0;
+					while(scanMoves.hasNext()) {
+						moves[i] = scanMoves.next();
+						i++;
+					}
+				}
+				catch(FileNotFoundException fnfex) {
+					fnfex.printStackTrace();
 				}
 			}
-			catch(FileNotFoundException fnfex) {
-				fnfex.printStackTrace();
-			}
-			*/
 		}
 		catch(FileNotFoundException fnfex) {
 			fnfex.printStackTrace();
@@ -128,7 +146,8 @@ public class Traversal {
 		//double yValue = 1 - (height / 2);
 		double yValue = (0.5 + (height * rows / 2)) - (height / 2);
 
-		StdDraw.setCanvasSize(1920, 1080);
+		//StdDraw.setCanvasSize(1920, 1080);
+		StdDraw.clear();
 
 		for(int i = 0; i < rows; i++) {
 			for(int j = 0; j < columns; j++) {
@@ -177,6 +196,18 @@ public class Traversal {
 					case "r":
 						StdDraw.picture(cell[0], cell[1], "assets\\images\\tvl_rh.png", width, height);
 						break;
+					case "h":
+						StdDraw.picture(cell[0], cell[1], "assets\\images\\tvl_sh1.png", width, height);
+						break;
+					case "H":
+						StdDraw.picture(cell[0], cell[1], "assets\\images\\tvl_sh0.png", width, height);
+						break;
+					case "v":
+						StdDraw.picture(cell[0], cell[1], "assets\\images\\tvl_sv1.png", width, height);
+						break;
+					case "V":
+						StdDraw.picture(cell[0], cell[1], "assets\\images\\tvl_sv0.png", width, height);
+						break;
 				}
 				j++;
 			}
@@ -193,15 +224,12 @@ public class Traversal {
 		StdDraw.line(cornerDR[0], cornerDR[1], cornerUR[0], cornerUR[1]);
 		StdDraw.line(cornerUR[0], cornerUR[1], cornerUL[0], cornerUL[1]);
 
-		StdDraw.show(32);
-
-		System.out.println(Arrays.deepToString(grid));
-
+		StdDraw.show(0);
 	}
 
 	private static int findQuit() {
 		try {
-			Scanner scanMoves = new Scanner(new File(filepathMoves)).useDelimiter("");
+			Scanner scanMoves = new Scanner(movesFile).useDelimiter("");
 			int currentTurn = 0;
 
 			while(scanMoves.hasNext()) {
@@ -226,7 +254,7 @@ public class Traversal {
 		int count = 0;
 
 		try {
-			Scanner scanFile = new Scanner(new File(filepathMoves)).useDelimiter("");
+			Scanner scanFile = new Scanner(movesFile).useDelimiter("");
 			while(scanFile.hasNext()) {
 				count++;
 				scanFile.next();
@@ -295,12 +323,13 @@ public class Traversal {
 							boolean containsTarget = contains(conflictingPieces, "t", "T");
 							boolean containsWall = contains(conflictingPieces, "x", "X");
 							boolean containsMover = contains(conflictingPieces, (Object[]) moverTypes);
+							boolean containsClosedSwitch = contains(conflictingPieces, "h", "v");
 
 							if(containsPlayer) {
 								if(containsTarget) {
 									gameWin();
 								}
-								else if(containsWall || containsMover) {
+								else if(containsWall || containsMover || containsClosedSwitch) {
 									gameLose();
 								}
 							}
@@ -351,6 +380,74 @@ public class Traversal {
 		return mergedMap;
 	}
 
+	private static String[][] generateSwitcherMap(int requestedTurn) {
+		String[][] switcherMap = new String[rows][columns];
+
+		int horizontalCount = 0, verticalCount = 0;
+
+		//	e.g. changeHorizontal becomes true if there are an odd number of horizontal moves
+		int counter = 0;
+
+		for(String move : moves) {
+			if(counter < requestedTurn && !move.equals(null)) {
+				switch(move) {
+					case "h":
+					case "l":
+						horizontalCount++;
+						break;
+					case "j":
+					case "k":
+						verticalCount++;
+						break;
+				}
+			}
+			counter++;
+		}
+
+		boolean changeHorizontal = (horizontalCount % 2 != 0);
+		boolean changeVertical = (verticalCount % 2 != 0);
+
+		try {
+			Scanner scanBoard = new Scanner(boardFile);
+
+			scanBoard.nextLine();
+			scanBoard.nextLine();
+
+			for(int i = 0; i < rows; i++) {
+				String line = scanBoard.nextLine();
+				Scanner scanLine = new Scanner(line).useDelimiter("");
+
+				for(int j = 0; j < columns; j++) {
+					String piece = scanLine.next();
+
+					switch(piece) {
+						case "h":	//	closed horizontal switch
+							switcherMap[i][j] = (changeHorizontal) ? "H" : "h";
+							break;
+						case "H":	//	open horizontal switch
+							switcherMap[i][j] = (changeHorizontal) ? "h" : "H";
+							break;
+						case "v":	//	closed vertical switch
+							switcherMap[i][j] = (changeVertical) ? "V" : "v";
+							break;
+						case "V":	//	open vertical switch
+							switcherMap[i][j] = (changeVertical) ? "v" : "V";
+							break;
+						default:
+							switcherMap[i][j] = "?";
+					}
+				}
+				scanLine.close();
+			}
+			scanBoard.close();
+		}
+		catch(FileNotFoundException fnfex) {
+			fnfex.printStackTrace();
+		}
+
+		return switcherMap;
+	}
+
 	private static String[][] generateBlankMap() {
 		String[][] blankMap = new String[rows][columns];
 
@@ -367,7 +464,7 @@ public class Traversal {
 		String[][] miscMap = new String[rows][columns];
 
 		try {
-			Scanner scanBoard = new Scanner(new File(filepathBoard));
+			Scanner scanBoard = new Scanner(boardFile);
 
 			scanBoard.nextLine();
 			scanBoard.nextLine();
@@ -411,7 +508,7 @@ public class Traversal {
 		int horizontalMoves = getMovesAtTurn(requestedTurn, "horizontal");
 
 		try {
-			Scanner scanBoard = new Scanner(new File(filepathBoard));
+			Scanner scanBoard = new Scanner(boardFile);
 			scanBoard.nextLine();
 			scanBoard.nextLine();
 
@@ -495,7 +592,7 @@ public class Traversal {
 		String pieceUsed = "!";
 
 		try {
-			Scanner scanBoard = new Scanner(new File(filepathBoard));
+			Scanner scanBoard = new Scanner(boardFile);
 			scanBoard.nextLine();
 			scanBoard.nextLine();
 
@@ -538,6 +635,8 @@ public class Traversal {
 					case "k":	//	up
 						currentLoc[ROW]--;
 						break;
+					case "q":
+						quit("");
 				}
 			}
 			counter++;
@@ -562,34 +661,35 @@ public class Traversal {
 	private static int getMovesAtTurn(int requestedTurn, String moveType) {
 		int verticalMoves = 0, horizontalMoves = 0;
 
-		/*
-		try {
-			Scanner scanMoves = new Scanner(new File(filepathMoves)).useDelimiter("");
-			for(int i = 0; i < requestedTurn; i++) {
-				char move = scanMoves.next().charAt(0);
+		if(textMode) {
+			try {
+				Scanner scanMoves = new Scanner(movesFile).useDelimiter("");
+				for(int i = 0; i < requestedTurn; i++) {
+					char move = scanMoves.next().charAt(0);
 
-				if(move == 'j' || move == 'k') {
-					verticalMoves++;
+					if(move == 'j' || move == 'k') {
+						verticalMoves++;
+					}
+					else if(move == 'h' || move == 'l') {
+						horizontalMoves++;
+					}
 				}
-				else if(move == 'h' || move == 'l') {
-					horizontalMoves++;
-				}
+				scanMoves.close();
 			}
-			scanMoves.close();
+			catch(FileNotFoundException fnfex) {
+				fnfex.printStackTrace();
+			}
 		}
-		catch(FileNotFoundException fnfex) {
-			fnfex.printStackTrace();
-		}
-		*/
+		else {
+			for(int i = 0; i < moves.length - 1; i++) {
+				String move = moves[i];
 
-		for(int i = 0; i < moves.length - 1; i++) {
-			String move = moves[i];
-
-			if(i < requestedTurn) {
-				if (move.equals("j") || move.equals("k")) {
-					verticalMoves++;
-				} else if (move.equals("h") || move.equals("l")) {
-					horizontalMoves++;
+				if(i < requestedTurn) {
+					if (move.equals("j") || move.equals("k")) {
+						verticalMoves++;
+					} else if (move.equals("h") || move.equals("l")) {
+						horizontalMoves++;
+					}
 				}
 			}
 		}
